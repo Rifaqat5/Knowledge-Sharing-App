@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Knowledge Sharing</string>
+    <string name="todo">TODO</string>
+
+    <!--    String for navigation bar-->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="search_friends">SEARCH FRIENDS</string>
+    <string name="add">Add Post</string>
+    <string name="profile">Profile</string>
+    <string name="profile1">PROFILE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="skill">Skill</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="already_have_account_sign_in">already have account <b>Sign In</b></string>
+    <string name="sign_in">Sign In</string>
+    <string name="click_here_for_sign_up">dont have account create new <b>Sign Up</b></string>
+    <string name="forget_password">Forget Password</string>
+    <string name="log_out">Log Out</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="submit">Submit</string>
+    <string name="enter">Enter</string>
+    <string name="click_on_the_check_button_to_make_friend_that_specific_user">Click on the <b>DETAILS</b> button to make or check whether he/she is your friend or not.</string>
+    <string name="make_friend">Make Friend</string>
+    <string name="add_post_for_sharing">ADD POST FOR SHARING</string>
+    <string name="post">POST</string>
+    <string name="home1">HOME</string>
+    <string name="user_name">User Name</string>
+    <string name="about_us">Hello My Name is Rifaqat Usman.I belong to Sabir Abad Karak (Pakistan).I have done my initial education from Diamond Children Academy (Sabir Abad Karak).I have done my Fsc in Pre_Engineering from Shaheen Children Academy and College of Sciences (Metha Khel Karak).Now I am doing my BS degree from Khoshal Khan Khattak University (Karak). </string>
+    <string name="click_outside_box_to_cancel_it">CLICK OUTSIDE BOX TO CANCEL IT</string>
+    <string name="videos">VIDEOS</string>
+    <string name="videos1">Videos</string>
+    <string name="write_a_comment">Write a comment</string>
+    <string name="document">Document</string>
+    <string name="more">More</string>
+    <string name="documents">DOCUMENTS</string>
+    <string name="details">Details</string>
+    <string name="time">time</string>
+    <string name="_6">6</string>
+    <string name="_9">9</string>
+    <string name="description">Description</string>
+    <string name="view_document">View Document</string>
+    <string name="department">Department</string>
+    <string name="upload_profile">Upload Profile</string>
+    <string name="friends">FRIENDS</string>
+    <string name="what_s_in_your_mind">What\'s in your mind</string>
+    <string name="add_image_to_your_post">Add Image to your Post</string>
+    <string name="see_profile">See Profile</string>
+    <string name="posted">Posted:</string>
+    <string name="ask_question_from_community">Ask Question from community</string>
+    <string name="questions">QUESTIONS</string>
+    <string name="view_questions_list">View Questions List</string>
+    <string name="title">Title</string>
+    <string name="add_document_to_your_post">Add Document to your Post</string>
+
+    <string-array name="skills_array">
+        <item>Computer Science</item>
+        <item>Zoology</item>
+        <item>Botany</item>
+        <item>Psychology</item>
+        <item>BBA</item>
+        <item>Physics</item>
+        <item>CMS</item>
+        <item>Library Science</item>
+        <item>English</item>
+        <item>Maths</item>
+        <item>Geology</item>
+        <item>Chemistry</item>
+        <item>Bio Informatics</item>
+        <!-- Add more skills as needed -->
+    </string-array>
+
+</resources>

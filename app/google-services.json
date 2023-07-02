@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "599701205335",
+    "firebase_url": "https://knowledge-sharing-app-ddb6c-default-rtdb.firebaseio.com",
+    "project_id": "knowledge-sharing-app-ddb6c",
+    "storage_bucket": "knowledge-sharing-app-ddb6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599701205335:android:da8cbccbacd3fceafa4e12",
+        "android_client_info": {
+          "package_name": "com.rifaqat.knowledgesharing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599701205335-9rageib50dsnnpq4c25t5dmfbn0lkmrr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rifaqat.knowledgesharing",
+            "certificate_hash": "4876a2e5f3015cdb5464319f8c617494fc44f74d"
+          }
+        },
+        {
+          "client_id": "599701205335-h4480478h6g0vtbdm6cp5s165s7qa8o2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdBfzLvWhbyAsvxXtY3oSwhiSmVzICG2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599701205335-h4480478h6g0vtbdm6cp5s165s7qa8o2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

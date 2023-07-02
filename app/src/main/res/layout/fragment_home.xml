@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:text="@string/home1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:background="@color/color2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view2"
+        android:layout_width="@dimen/_55mdp"
+        android:layout_height="@dimen/_55mdp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_5mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:layout_marginEnd="@dimen/_5mdp"
+        app:cardCornerRadius="@dimen/_60mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view3">
+
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55mdp"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
+            tools:ignore="VisualLintBounds" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.22000003"
+        tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintOverlap" />
+
+    <TextView
+        android:id="@+id/department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2mdp"
+        android:text="@string/skill"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:ignore="TextContrastCheck,VisualLintOverlap" />
+
+    <Button
+        android:id="@+id/seeProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_29mdp"
+        android:layout_marginEnd="@dimen/_5mdp"
+        android:background="@drawable/my_custom_bg_3"
+        android:text="@string/see_profile"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8font_mdp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/color1"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view2"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/askQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:text="@string/ask_question_from_community"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/viewQuestion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/viewQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:layout_marginEnd="@dimen/_6mdp"
+        android:text="@string/view_questions_list"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/askQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:ignore="TextContrastCheck" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:background="@color/color2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/askQuestion" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5mdp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_49mdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

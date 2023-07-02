@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.DocumentFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view2"
+        android:layout_width="@dimen/_45mdp"
+        android:layout_height="@dimen/_45mdp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_7mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:layout_marginEnd="@dimen/_14mdp"
+        app:cardCornerRadius="@dimen/_60mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profileImgAdd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45mdp"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
+            tools:ignore="VisualLintBounds" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nameAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.24000001"
+        tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintOverlap" />
+
+    <TextView
+        android:id="@+id/departmentAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2mdp"
+        android:text="@string/skill"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/nameAdd"
+        app:layout_constraintTop_toBottomOf="@+id/nameAdd"
+        tools:ignore="TextContrastCheck,VisualLintOverlap" />
+
+    <Button
+        android:id="@+id/postBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_28mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:background="@drawable/disable_btn_bg"
+        android:enabled="false"
+        android:text="@string/post"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        tools:ignore="TouchTargetSizeCheck,VisualLintOverlap" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/title"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/_14font_mdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/postImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:ignore="VisualLintTextFieldSize"
+        android:importantForAutofill="no" />
+
+    <ImageView
+        android:id="@+id/uploadPostImg"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:layout_marginBottom="@dimen/_54mdp"
+        android:src="@drawable/document"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:text="@string/add_document_to_your_post"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/uploadPostImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/uploadPostImg"
+        tools:ignore="VisualLintOverlap" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1mdp"
+        android:background="@color/color2"
+        android:layout_marginBottom="@dimen/_5mdp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_210mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        android:contentDescription="@string/todo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

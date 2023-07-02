@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/_8mdp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view2"
+        android:layout_width="@dimen/_45mdp"
+        android:layout_height="@dimen/_45mdp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_7mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:layout_marginEnd="@dimen/_14mdp"
+        app:cardCornerRadius="@dimen/_60mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profileImgFriends"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45mdp"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
+            tools:ignore="VisualLintBounds" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nameFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.24000001"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/departmentFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2mdp"
+        android:text="@string/skill"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/nameFriends"
+        app:layout_constraintTop_toBottomOf="@+id/nameFriends" />
+
+    <Button
+        android:id="@+id/followBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_29mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:background="@drawable/my_custom_bg_3"
+        android:text="@string/details"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8font_mdp"
+        app:backgroundTint="@color/color1"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
