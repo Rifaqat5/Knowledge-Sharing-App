@@ -7,15 +7,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.rifaqat.knowledgesharing.R;
-import com.rifaqat.knowledgesharing.databinding.ActivitySignUpBinding;
 import com.rifaqat.knowledgesharing.ViewModels.AuthenticationViewModel;
+import com.rifaqat.knowledgesharing.databinding.ActivitySignUpBinding;
 
 import java.util.Objects;
 
@@ -23,10 +27,11 @@ public class SignUpActivity extends AppCompatActivity {
 
     AuthenticationViewModel viewModel;
     ActivitySignUpBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=ActivitySignUpBinding.inflate(getLayoutInflater());
+        binding = ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         // Create an ArrayAdapter for the spinner...Spinner is used to select department from dropdown menu.
@@ -63,8 +68,8 @@ public class SignUpActivity extends AppCompatActivity {
         viewModel.getFirebaseUserMutableLiveData().observe(this, new Observer<FirebaseUser>() {
             @Override
             public void onChanged(FirebaseUser firebaseUser) {
-                if(firebaseUser!=null){
-                    startActivity(new Intent(SignUpActivity.this,SignInActivity.class));
+                if (firebaseUser != null) {
+                    startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
                     finish();
                 }
             }
@@ -74,10 +79,11 @@ public class SignUpActivity extends AppCompatActivity {
         binding.alreadyAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignUpActivity.this,SignInActivity.class));
+                startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
                 finish();
             }
         });
+
 
         //Now we are going to register user by clicking on signUp btn.
         binding.signUpBtn.setOnClickListener(new View.OnClickListener() {
@@ -89,14 +95,14 @@ public class SignUpActivity extends AppCompatActivity {
                 String department = binding.department.getText().toString();
 
                 if (!email.isEmpty() && !password.isEmpty() && !name.isEmpty() && !department.isEmpty()) {
-                    viewModel.register(email, password, name, department);
-//                    We will navigate user to main activity with user register
-                    startActivity(new Intent(SignUpActivity.this,MainActivity.class));
-                    finish();
+                        viewModel.register(email, password, name, department);
+//                    We will navigate user to sign in activity with user register
+                        startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
                 } else {
                     Toast.makeText(SignUpActivity.this, "Please fill all the boxes properly", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
 }

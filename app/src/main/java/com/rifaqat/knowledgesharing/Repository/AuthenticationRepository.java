@@ -12,7 +12,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
+import com.rifaqat.knowledgesharing.Activities.SignUpActivity;
 import com.rifaqat.knowledgesharing.Models.User;
+
+import java.util.Objects;
 
 public class AuthenticationRepository {
     private Application application;
@@ -54,11 +57,27 @@ public class AuthenticationRepository {
                     //save data of user to database.
                     database.getReference().child("Users").child(id).setValue(user);
                     Toast.makeText(application, "User Created Successfully", Toast.LENGTH_SHORT).show();
+                    sendVerificationEmail();
                 } else {
                     Toast.makeText(application, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    private void sendVerificationEmail() {
+        Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).sendEmailVerification()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(application, "An email is send to you click on it and verify your email and then come back and Sign In by giving your email and password.", Toast.LENGTH_LONG).show();
+                        }
+                        else {
+                            Toast.makeText(application, "Something Went Wrong", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     //Method for login already register user(sign in).
@@ -67,7 +86,12 @@ public class AuthenticationRepository {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    firebaseUserMutableLiveData.postValue(auth.getCurrentUser());
+                    if(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).isEmailVerified()){
+                        firebaseUserMutableLiveData.postValue(auth.getCurrentUser());
+                    }
+                    else {
+                        Toast.makeText(application, "Please Verify your Email first", Toast.LENGTH_LONG).show();
+                    }
                 } else {
                     Toast.makeText(application, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }

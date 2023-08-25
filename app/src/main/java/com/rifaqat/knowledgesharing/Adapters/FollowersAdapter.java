@@ -53,6 +53,8 @@ public class FollowersAdapter extends RecyclerView.Adapter<FollowersAdapter.View
                         Picasso.get().load(user.getProfile_picture())
                                 .placeholder(R.drawable.placeholder)
                                 .into(holder.binding.profileImgFollowers);
+                        holder.binding.nameFollowers.setText(user.getName());
+                        holder.binding.departmentFollowers.setText(user.getDepartment());
                     }
 
                     @Override

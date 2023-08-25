@@ -56,6 +56,8 @@
     <string name="view_questions_list">View Questions List</string>
     <string name="title">Title</string>
     <string name="add_document_to_your_post">Add Document to your Post</string>
+    <string name="sent_otp">SEND OTP</string>
+    <string name="send_verification_email">Send Verification Email</string>
 
     <string-array name="skills_array">
         <item>Computer Science</item>
